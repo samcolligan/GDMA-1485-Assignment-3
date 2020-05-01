@@ -46,9 +46,105 @@
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
+
+
+/*--------------------------------------------------------------
+4.0 - ELEMENTS 
+-------------------------------------------------------------- */
+
+
+fieldset, input, textarea, select{ 
+	border:none;
+}
+legend {
+	display: none;
+}
+
+
+
+
+
+
+li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav li {
+	margin: 0 25px;
+}
+
+.sign-in li {
+	 margin: 10px;
+}
+
+
+
+h2 {
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: 44px;
+	text-transform: uppercase;
+	
+}
+
+
+	
+
+
+ h3 {
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #f40014;
+    border-color:#f40014;
+}
+
+nav li a {
+	color: #000000;
+	background-color: #FFFFFF;
+}
+a, a:hover {
+    padding: 5px 25px;
+}
+
+a:hover {
+	background-color: #ffffff;
+	border-color:#f40014;
+	color: #f40014;
+}
+
+p {
+	font-family: 'EB Garamond', serif;
+	font-size: 14px;
+}
+
+
+
+h3, .col-1-2 p {
+	text-align: center;
+}
+
+#search, .sign-in li a {
+	color: #F40014;
+}
+
+.sign-in li a {
+	background-color: #FFFFFF;
+}
+/*--------------------------------------------------------------
+5.0 - OBJECTS 
+-------------------------------------------------------------- */
 .row {
 	overflow: auto;
 }
@@ -58,37 +154,71 @@ html {
 }
 
 /*--------------------------------------------------------------
-4.0 - ELEMENTS 
+6.0 - COMPONENTS 
 -------------------------------------------------------------- */
+.col-1-4 {
+	float: right;
+	margin: 37px;
+}
+
+.col-1-2 {
+	padding: 40px;
+}
 .bg-red {
-	background-color: #9F0C0F;
+	background-color: #F40014;
 	padding: 5px;
 }
 
-.bg-red h2, #bg-home, .candy{
-	text-align: center;
+#bg-home, .candy{
 	color: #000000;
+}
+
+.bg-red, #bg-home, .candy {
+		text-align: center;
+}
+
+.bg-red p {
+	color: #FFFFFF;
+}
+
+.col-1-2:first-child {
+    float: left;
+}
+.sign-in nav ul li{
+	color: #f40014;
+}
+
+.col-1-2:last-child {
+	float: right;
 	
 }
 
-fieldset, input, textarea, select{ 
-	border:none;
-}
-legend {
-	display: none;
+.vl {
+	border-left: 2px solid #F40014;
+	height: 30px;
 }
 
-label,.bg-red h2, .btn, li{
+#bg-home p {
 	font-family: Montserrat;
 	font-weight: lighter;
 	font-size: 12px;
-	text-transform: uppercase;
 }
-.btn, a{
-	text-decoration: none;
+
+
+#bg-home div div {
+	margin: 0 auto;
+	width: 500px;
 }
- .sign-in, nav, #favorites{
-	float: right;
+
+#red-board {
+	border-bottom: 2px solid #f40014;
+	width: 240px;
+	margin-top: 50px;
+	
+}
+
+#favorites {
+	margin-right: 940px;
 }
 
 #bg-home {
@@ -100,106 +230,185 @@ label,.bg-red h2, .btn, li{
 	
 }
 
-.sign-in {
-	display: inline block;
+#col-1 {
+	width: 300px;
 }
 
-li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px;
+#bg-bubbles {
+	background-image: url("../img/bg-bubbles.jpg");
+	padding: 150px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-.search label, .sign-in nav ul li{
-	color: #9F0C0F;
-}
+/*--------------------------------------------------------------
+7.0 - UTILITIES
+-------------------------------------------------------------- */
 
-input #search {
-	border-bottom: medium;
-	border-bottom-color: #9F0C0F;
+label,.bg-red p, .btn, li{
+	font-family: Montserrat;
+	font-weight: lighter;
+	font-size: 12px;
+	text-transform: uppercase;
 }
-
-#favorites {
-	margin-right: 940px;
+.btn, a{
+	text-decoration: none;
 }
 
 h1 {
-	font-family: Montserrat;
-	font-weight: bold;
-	font-size: 44px;
-	text-transform: uppercase;
-	
+	float: right;
+	width: 350px;
+	margin: 0 auto;
+}
+ .sign-in {
+	float: right;
 }
 
-#bg-home p {
+
+li {
+ transition-duration: 0.5s;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+ display: block;
+ transition-duration: 0.5s;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+nav {
+	margin: 0 auto;
+	align-content: center;
+}
+
+.candy p, .col-1-2 p {
+	font-family: Awesome;
+	font-size: 15px;
+}
+
+
+.candy h3 {
+	color: #f40014;
+}
+
+
+.container p, .container{
+	width: 500px;
+	text-align: left;
 	font-family: Montserrat;
 	font-weight: lighter;
 	font-size: 12px;
 }
-	
 
-.col-1-2:first-child {
-    float: left;
-}
- h2 {
-	font-family: Montserrat;
-	font-weight: bold;
-	font-size: 16px;
-	text-transform: uppercase;
-	color: #9F0C0F;
+
+.container:first-child {
+	padding-bottom: 80px;
 }
 
-
-.col-1-2:last-child {
-	float: right;
+.container:last-child input {
+	color: white;
+	background-color: #f40014;
 	
 }
 
-.col-1-2:first-child {
-    margin-left: 100px;
-}
-.col-1-2 {
-	padding: 40px;
-}
-
-#bg-home div div {
-	margin: 0 auto;
-}
-
-.col-1-2:last-child {
-	margin-right: 200px;
-}
-
-.col-1-2 {
+.container:last-child input:first-child {
+	border-bottom: 2px solid #FFFFFF;
 	width: 300px;
+	padding-bottom: 15px;
+}
+.container:last-child input:last-child {
+	width: 150px;
+	border: 2px solid #FFFFFF;
+	padding: 15px;
+	margin-left: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #9F0C0F;
-    border-color:#9F0C0F;
-}
-a, a:hover {
-    padding: 5px 25px;
+
+#col-1 p {
+	text-align: justify;
 }
 
-a:hover {
-	background-color: #ffffff;
-	border-color:#9F0C0F;
-	color: #9F0C0F;
+#col-1 h3 {
+	text-align: left;
 }
 
-p {
-	font-family: 'EB Garamond', serif;
-	font-size: 14px;
+
+#line {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #f40014; 
+   line-height: 0.1em;
+   margin: 10px 0 20px;
+	color: #f40014;
+
+} 
+
+
+
+h3 span { 
+    background:#fff; 
+    padding:0 10px; 
 }
 
-.col-1-4 {
-	float: right;
-	margin: 45px;
+footer li {
+	display: block;
+	margin: 10px 20px;
 }
 
-h2{
-	text-align: center;
+.col-1-4 input {
+	border-bottom: 1px solid #f40014; 
+	width: 150px;
+}
+
+
+#bg-pink, footer li a, footer input{
+	background-color: #E9CACA;
 }
